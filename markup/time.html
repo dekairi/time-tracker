@@ -10,36 +10,48 @@
   <body>
     <main class="main-block">
       <h1 class="visually-hidden">Time tracker</h1>
-      <div class="tracker-wrap">
-        <section class="time-tracker">
-          <h2 class="visually-hidden">Control view</h2>
-          <form class="new-task-form" action="#" method="post">
-            <input class="new-task-form__task-input" type="text" name="task-title" aria-label="Add task title" placeholder="Task title">
-            <input class="new-task-form__time-input" type="time" name="time" value="00:00:00" aria-label="Time" readonly>
-            <button class="new-task-form__toggle-button" type="submit" aria-label="Start or stop timer">Start or Stop</button>
-          </form>
-        </section>
-        <section class="history">
-          <h2 class="history__header">Overview</h2>
-          <ul class="tasks-list">
-            <li id="0" class="tasks-list__item">
-              <button class="tasks-list__toggle-button tasks-list__toggle-button--restart" type="button" aria-label="Restart timer">Resume</button>
-              <p class="tasks-list__title">Task one</p>
-              <p class="tasks-list__time">02:35:00</p>
-              <button class="tasks-list__toggle-button tasks-list__toggle-button--delete" type="button" aria-label="Delete task">Delete</button>
-            </li>
-            <li id="1" class="tasks-list__item">
-              <button class="tasks-list__toggle-button tasks-list__toggle-button--restart" type="button" aria-label="Restart timer">Resume</button>
-              <p class="tasks-list__title">Task two</p>
-              <p class="tasks-list__time">01:35:00</p>
-              <button class="tasks-list__toggle-button tasks-list__toggle-button--delete" type="button" aria-label="Delete task">Delete</button>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <section class="overview">
-        <canvas class="overview__chart"></canvas>
+      <section class="time-tracker">
+        <h2 class="visually-hidden">Control view</h2>
+        <form class="new-task-form" action="#" method="post">
+          <input class="new-task-form__task-input" type="text" name="task-title" aria-label="Add task title" placeholder="Task title">
+          <input class="new-task-form__time-input" type="text" name="time" value="00:00:00" aria-label="Time" readonly>
+          <button class="new-task-form__toggle-button" type="submit" aria-label="Start or stop timer">Start or Stop</button>
+        </form>
       </section>
+      <div class="main-block__wrap">
+        <ul class="overview-navigation">
+          <li class="overview-navigation__item"><a class="overview-navigation__link" href="#">History</a></li>
+          <li class="overview-navigation__item"><a class="overview-navigation__link" href="#">Statistics</a></li>
+        </ul>
+        <div class="main-block__overview-wrap">
+          <section class="history">
+            <h2 class="history__header visually-hidden">History</h2>
+            <ul class="tasks-list">
+              <li id="0" class="tasks-list__item">
+                <button class="tasks-list__toggle-button tasks-list__toggle-button--restart" type="button" aria-label="Restart timer">Resume</button>
+                <p class="tasks-list__title">Task one</p>
+                <p class="tasks-list__time">02:35:00</p>
+                <button class="tasks-list__toggle-button tasks-list__toggle-button--delete" type="button" aria-label="Delete task">Delete</button>
+              </li>
+              <li id="1" class="tasks-list__item">
+                <button class="tasks-list__toggle-button tasks-list__toggle-button--restart" type="button" aria-label="Restart timer">Resume</button>
+                <p class="tasks-list__title">Task two</p>
+                <p class="tasks-list__time">01:35:00</p>
+                <button class="tasks-list__toggle-button tasks-list__toggle-button--delete" type="button" aria-label="Delete task">Delete</button>
+              </li>
+            </ul>
+          </section>
+          <section class="statistics visually-hidden">
+            <h2 class="statistics__header visually-hidden">Statistics</h2>
+            <canvas class="statistics__chart"></canvas>
+          </section>
+        </div>
+      </div>
+
+      <footer class="footer">
+        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      </footer>
 
       <script src="bundle.js"></script>
     </main>

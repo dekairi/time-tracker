@@ -1,0 +1,41 @@
+.new-task-form {
+  display: flex;
+}
+
+.new-task-form__toggle-button {
+  @include hide-text();
+  width: 32px;
+  height: 32px;
+
+  background-color: $light-purple;
+  background-image: url("../img/icons/play.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  border: 1px solid $white;
+  border-radius: 4px;
+}
+
+.new-task-form__task-input,
+.new-task-form__time-input {
+  padding: 5px;
+  margin-right: 5px;
+
+  color: $white;
+
+  background-color: $light-purple;
+  border: 1px solid $white;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.new-task-form__task-input {
+  flex-grow: 1;
+}
+
+.new-task-form__time-input {
+  width: 75px;
+}

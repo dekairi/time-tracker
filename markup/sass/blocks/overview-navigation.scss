@@ -1,0 +1,29 @@
+.overview-navigation {
+  @include list-reset();
+  display: flex;
+}
+
+.overview-navigation__item {
+  flex-grow: 1;
+
+  background-color: $light-purple;
+
+  &:first-child {
+    margin-right: 1px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-purple;
+    border-top-color: $main-purple;
+    cursor: pointer;
+  }
+}
+
+.overview-navigation__link {
+  display: block;
+  padding: 10px 15px;
+
+  text-align: center;
+  color: $white;
+}
